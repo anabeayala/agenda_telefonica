@@ -1,5 +1,5 @@
 module.exports = function(app){
-
+ 
     var multer = require('multer');
     
     var path = require('path');
@@ -16,6 +16,6 @@ module.exports = function(app){
     // utiliza a storage para configurar a instância do multer
     var upload = multer({ storage });
     app.post('/file/upload', upload.single('file'),function(req,res){
-        res.render('resultado/sucesso');
+        res.render('result/resultado');
     });
 }    

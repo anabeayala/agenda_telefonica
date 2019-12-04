@@ -30,7 +30,7 @@
 		var dbo= db.db('banco_app');
 		dbo.collection('contato').find().toArray
 		(function(err, result){
-			res.render('index', {clientes: result});
+			res.render('index', {contato: result});
 		});
 	});
 
