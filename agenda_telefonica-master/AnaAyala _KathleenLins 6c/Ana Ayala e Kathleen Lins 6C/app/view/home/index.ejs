@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda telefônica</title>
+</head>
+<body>
+
+    <h2>Registrar contato<h2>
+    <!-- <button type="submit">Adicionar</button> -->
+        <form action="/show" method="POST" enctype="multipart/form-data">
+        <input type="text" placeholder="Nome" name="name">
+        <input type="text" placeholder="Sobrenome" name="surname">
+        <input type="file" name="file" />
+        <input type="number" phone-mask="(00)00000-0000"  maxlength="11"placeholder="Ex.: (00) 00000-0000" name="cel">
+        
+        <button type="submit">Salvar</button>
+    </form> 
+
+</body>
+</html>
+
+
+
+
+
+    

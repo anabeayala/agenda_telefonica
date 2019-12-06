@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+	<title>Agenda telefônica</title>
+</head>
+<body>
+<h2>Editar Contatos</h2>
+  <% data.forEach(function(details) { %>
+
+ <!--   
+    <form action='file/upload' method='post'>
+    <input type='submit' value='Upload!' />
+    </form>  -->
+
+	<form action="/edit/<%= details._id%>" method="POST" enctype="multipart/form-data">
+	<input type="text" value="<%= details.name%>" name="name">
+	<input type="text" value="<%= details.surname%>" name="surname">
+	<input type="text" value="<%= details.cel%>" name="cel">
+    <input type="file" name="file" />
+	<button><a href="/show">Agenda</a></button>
+	<button type="submit">Editar</button>
+	</form>
+	
+	<% }) %>
+</body>
+</html>
